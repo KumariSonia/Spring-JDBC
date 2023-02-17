@@ -18,15 +18,14 @@ public class SpringJdbcAnnotationApplication {
 	public static void main(String[] args) {
 		System.out.println("My program started...");
 		ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
-		
-		
+
 		StudentDao studentDao = context.getBean("studentDao", StudentDaoImpl.class);
 
 //		// insert query
 		Student student = new Student();
-		student.setId(107);
-		student.setName("Twinkle Khannna");
-		student.setCity("Mumbai");
+		student.setId(108);
+		student.setName("Nandu");
+		student.setCity("TATA");
 
 		studentDao.insert(student);
 

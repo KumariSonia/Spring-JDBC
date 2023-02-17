@@ -2,12 +2,16 @@ package com.sonia.secureapp.dao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.sonia.secureapp.entity.Student;
 
+@Component("studentDao")
 public class StudentDaoImpl implements StudentDao {
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	public JdbcTemplate getJdbcTemplate() {
